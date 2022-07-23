@@ -19,9 +19,9 @@ spec:
        - containerPort: 80
        resources:
          limits:
-           cpu: 1000m
-         requests:
            cpu: 500m
+         requests:
+           cpu: 200m
 
 
 ---
@@ -32,6 +32,7 @@ metadata:
   labels:
     run: frontend
 spec:
+  type: NodePort
   ports: 
   - port: 80
     protocol: TCP
